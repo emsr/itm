@@ -1,0 +1,36 @@
+
+  Enter profile file name: 
+  Enter transmit antenna height (>= 0, <= 30000) in meters: 
+  Enter receive antenna height (>= 0, <= 30000) in meters: 
+  Enter transmit frequency (>= 1, <= 40000) in MHz: 
+  Enter time % (>= 0, <= 100) %: 
+  Enter location % (>= 0, <= 100) %: 
+  Enter situation % (>= 0, <= 100) %: 
+  Enter polarization (V|H): 
+  Enter relative permittivity (>= 0, <= 100): 
+  Enter conductivity (>= 1e-05, <= 100) in Siemens per meter: 
+  Enter refractivity (>= 200, <= 450) in M-units:   Radio Climates:
+  1) Equatorial
+  2) Continental Subtropical
+  3) Maritime Tropical
+  4) Desert
+  5) Continental Temperate
+  6) Maritime Temperate, Over Land
+  7) Maritime Temperate, Over Sea
+  Enter Climate: 
+  ITM Output
+  Loss    : 178.529 dB
+  Errors  : 0
+  Warnings: 0
+  Terminal horizon angle, mrad              : 20.3135
+  Terminal horizon angle, mrad              : 14.5195
+  Terminal horizon distance, in meters      : 15393.9
+  Terminal horizon distance, in meters      : 9696.15
+  Terminal effective height, in meters      : 37.7362
+  Terminal effective height, in meters      : 12.5316
+  Surface refractivity, in N-Units          : 295.691
+  Terrain irregularity parameter, in meters : 379.994
+  Reference attenuation, in dB              : 58.3259
+  Free space basic transmission loss, in dB : 121.302
+  Path distance, in km                      : 27.9889
+  Mode of propagation value                 : 1

@@ -1,0 +1,95 @@
+  Do knife edge reflection? true
+
+  Enter profile file name: 
+  Enter transmit antenna height (>= 0, <= 30000) in meters: 
+  Enter receive antenna height (>= 0, <= 30000) in meters: 
+  Enter transmit frequency (>= 1, <= 40000) in MHz: 
+  Enter polarization (V|H): 
+  Enter relative permittivity (>= 1, <= 100): 
+  Enter conductivity (>= 0, <= 100) in Siemens per meter: 
+  Enter refractivity (>= 200, <= 450) in M-units: 
+  Enter humidity (>= 0, <= 110) in g/m^3: 
+  version = 6.2.0
+  default seawater permittivity: 81
+
+  default seawater conductivity: 4 S/m
+
+
+  ====================================================
+  TIREM Run
+  ----------------------------------------------------
+  tx_antenna_height              =             1.5 m
+  rx_antenna_height              =              10 m
+  frequency                      =             300 MHz
+  refractivity                   =             310 N
+  humidity                       =               5 g/m^3
+  atmosphere                     = U_S_Standard_1962
+  effective_Earth_radius_factor  =          1.3562
+  permittivity                   =               4
+  conductivity                   =           0.001 S/m
+  sigma_land_elevation           =               0 m
+  polarization                   = Vertical
+  permittivity_sea               =              81
+  conductivity_sea               =               4 S/m
+  sigma_sea_elevation            =               0 m
+  ray_trace_height               =            1524 m
+  num_profile_points             =          250
+  do_diffraction_multipath       = true
+  do_wedge_diffraction           = true
+  ----------------------------------------------------
+  version                        = 6.2.0
+  propagation_mode               = Diffraction
+  fresnel_clearance              =               0
+  shadow_depth                   =         1190.34 m
+  tx_fresnel_clearance           =       0.0861246
+  rx_fresnel_clearance           =        0.998238
+  total_loss                     =         158.866 dB
+  total_troposphere_loss         =         201.815 dB
+  total_ke_diffraction_loss      =         160.482 dB
+  total_wedge_diffraction_loss   =         158.866 dB
+  free_space_loss                =         123.894 dB
+  multipath_loss                 =               0 dB
+  tx_multipath_loss              =         4.98895 dB
+  rx_multipath_loss              =               0 dB
+  absorption_loss                =               0 dB
+  knife_edge_diffraction_loss    =         36.5879 dB
+  wedge_diffraction_loss         =         34.9719 dB
+  tx_horizon_angle               =        0.139374 deg
+  tx_horizon_distance            =           95500 m
+  tx_horizon_elevation           =             761 m
+  tx_horizon_index               =          191
+  rx_horizon_angle               =         1.38745 deg
+  rx_horizon_distance            =           95500 m
+  rx_horizon_elevation           =             761 m
+  rx_horizon_index               =          191
+  tx_troposcatter_angle          =        0.547794 deg
+  rx_troposcatter_angle          =         1.80369 deg
+  troposcatter_angle             =         2.35148 deg
+  troposcatter_distance          =         95503.5 m
+  troposcatter_elevation         =         761.048 m
+  troposcatter_path_length       =          124512 m
+  multipath_index                =           -1
+  tx_multipath_index             =          110
+  rx_multipath_index             =          248
+  path_length                    =          124500 m
+  tx_path_length                 =          124500 m
+  rx_path_length                 =          124500 m
+  diffracted_path_length         =          124510 m
+  water_body
+  ----------
+  total_water_distance           =           39000 m
+  water_fraction                 =         31.3253 %
+     begin_dist (m)     end_dist (m)
+    ...............  ...............
+                  0            13250
+              14750            34750
+             118750           124500
+  knife_edge
+  ----------
+  max_delta_elevation            =               1 m
+  min_delta_distance             =             500 m
+       distance (m)    elevation (m)    terrain_index       water_body
+    ...............  ...............  ...............  ...............
+              95500              761              191                -
+  ====================================================
+  Do you wish to run TIREM again (y/n)? 
