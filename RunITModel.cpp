@@ -30,6 +30,7 @@ main(int num, char**/*args*/)
   double confidence, reliability;
   double time, location, situation;
   double dbloss = 0.0;
+  int mdvar = 12;//MDVAR__ACCIDENTAL_MODE;//MDVAR__SINGLE_MESSAGE_MODE;
   //char strmode[200] = "";
 
   // Read profile data.
@@ -73,6 +74,9 @@ main(int num, char**/*args*/)
     cin >> reliability;
   }
 
+  cout << "\n  Enter variability type: ";
+  cin >> mdvar;
+
   char pol = '\0';
   cout << "\n  Enter polarization (V|H): ";
   cin >> pol;
@@ -111,7 +115,6 @@ main(int num, char**/*args*/)
 
   long warnings = 0;
   IntermediateValues interValues;
-  int mdvar = MDVAR__ACCIDENTAL_MODE;//MDVAR__SINGLE_MESSAGE_MODE;
   int err;
   if (tls)
     err = ITM_P2P_TLS_Ex(tx_antenna_height, rx_antenna_height, elevation.data(), climate, refractivity, frequency,

@@ -26,7 +26,7 @@ enable_testing()
 
 set(CMAKE_CXX_FLAGS "${CMAKE_ADDTIONAL_CXX_FLAGS} -Wall -Wextra -Wno-deprecated-declarations -Wold-style-cast")
 
-add_library(itm SHARED
+add_library(ITModel SHARED
   src/ComputeDeltaH.cpp
   src/DiffractionLoss.cpp
   src/FindHorizons.cpp
@@ -50,35 +50,35 @@ add_library(itm SHARED
   src/ValidateInputs.cpp
   src/Variability.cpp
 )
-target_include_directories(itm PUBLIC  
+target_include_directories(ITModel PUBLIC  
     "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>"
-    "$<INSTALL_INTERFACE:include/itm>"
+    "$<INSTALL_INTERFACE:include/ITModel>"
 )
 
-add_executable(run_itm run_itm.cpp)
-target_link_libraries(run_itm itm)
+add_executable(RunITModel RunITModel.cpp)
+target_link_libraries(RunITModel ITModel)
 
 configure_package_config_file(
-    "${PROJECT_SOURCE_DIR}/cmake/itm_config.cmake.in"
-    "${PROJECT_BINARY_DIR}/itm_config.cmake"
-    INSTALL_DESTINATION lib/cmake/itm
+    "${PROJECT_SOURCE_DIR}/cmake/ITModelConfig.cmake.in"
+    "${PROJECT_BINARY_DIR}/ITModelConfig.cmake"
+    INSTALL_DESTINATION lib/cmake/ITModel
 )
 
 
 install(FILES
-        "${PROJECT_BINARY_DIR}/itm_config.cmake"
-        DESTINATION lib/cmake/itm)
+        "${PROJECT_BINARY_DIR}/ITModelConfig.cmake"
+        DESTINATION lib/cmake/ITModel)
 
 install(FILES
         "${CMAKE_CURRENT_SOURCE_DIR}/include/Enums.h"
         "${CMAKE_CURRENT_SOURCE_DIR}/include/Errors.h"
         "${CMAKE_CURRENT_SOURCE_DIR}/include/itm.h"
         "${CMAKE_CURRENT_SOURCE_DIR}/include/Warnings.h"
-        DESTINATION include/itm
+        DESTINATION include/ITModel
         )
 
-install(TARGETS itm run_itm
-  EXPORT itm_targets
+install(TARGETS ITModel RunITModel
+  EXPORT ITModelTargets
   RUNTIME DESTINATION bin
   ARCHIVE DESTINATION lib
   LIBRARY DESTINATION lib
@@ -86,4 +86,4 @@ install(TARGETS itm run_itm
   INCLUDES DESTINATION include
 )
 
-install(EXPORT itm_targets DESTINATION lib/cmake/itm)
+install(EXPORT ITModelTargets DESTINATION lib/cmake/ITModel)

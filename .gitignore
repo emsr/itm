@@ -2,6 +2,12 @@
 ## Windows
 ############
 
+###################
+## Goofy Linux Dev
+###################
+RunITModel
+help*.txt
+
 # Windows image file caches
 Thumbs.db
 *.o

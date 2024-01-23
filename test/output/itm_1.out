@@ -5,6 +5,7 @@
   Enter transmit frequency (>= 1, <= 40000) in MHz: 
   Enter confidence % (>= 0, <= 100) %: 
   Enter reliability % (>= 0, <= 100) %: 
+  Enter variability type: 
   Enter polarization (V|H): 
   Enter relative permittivity (>= 0, <= 100): 
   Enter conductivity (>= 1e-05, <= 100) in Siemens per meter: 
@@ -18,7 +19,7 @@
   7) Maritime Temperate, Over Sea
   Enter Climate: 
   ITM Output
-  Loss    : 120.068 dB
+  Loss    : 122.129 dB
   Errors  : 0
   Warnings: 0
   Terminal horizon angle, mrad              : 2.35203

@@ -6,6 +6,7 @@
   Enter time % (>= 0, <= 100) %: 
   Enter location % (>= 0, <= 100) %: 
   Enter situation % (>= 0, <= 100) %: 
+  Enter variability type: 
   Enter polarization (V|H): 
   Enter relative permittivity (>= 0, <= 100): 
   Enter conductivity (>= 1e-05, <= 100) in Siemens per meter: 
