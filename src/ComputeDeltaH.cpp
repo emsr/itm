@@ -19,7 +19,7 @@ double ComputeDeltaH(const double pfl[], const double d_start__meter, const doub
 {
     double s[247] = { 0 };                      // Temp pfl data array
 
-    const int np = (int)pfl[0];
+    const int np = static_cast<int>(pfl[0]);
     double x_start = d_start__meter / pfl[1];   // index to start considering terrain points
     double x_end = d_end__meter / pfl[1];       // index to stop considering terrain points
 
@@ -27,7 +27,7 @@ double ComputeDeltaH(const double pfl[], const double d_start__meter, const doub
     if (x_end - x_start < 2.0)
         return 0;
 
-    int p10 = (int)(0.1 * (x_end - x_start + 8.0));
+    int p10 = static_cast<int>(0.1 * (x_end - x_start + 8.0));
     p10 = MIN(MAX(4, p10), 25);                 // 10% index
 
     const int n = 10 * p10 - 5;
@@ -38,7 +38,7 @@ double ComputeDeltaH(const double pfl[], const double d_start__meter, const doub
     s[1] = 1.0;
 
     x_end = (x_end - x_start) / np_s;
-    int i = (int)x_start;
+    int i = static_cast<int>(x_start);
     x_start -= float(i + 1.0);
 
     for (int j = 0; j < n; j++)

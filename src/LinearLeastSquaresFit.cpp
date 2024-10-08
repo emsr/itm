@@ -16,15 +16,15 @@
  *===========================================================================*/
 void LinearLeastSquaresFit(const double pfl[], const double d_start, const double d_end, double *fit_y1, double *fit_y2)
 {
-    const int np = (int)pfl[0];
+    const int np = static_cast<int>(pfl[0]);
 
     int i_start = int(fdim(d_start / pfl[1], 0.0));
     int i_end = np - int(fdim(np, d_end / pfl[1]));
 
     if (i_end <= i_start)
     {
-        i_start = (int)fdim(i_start, 1.0);
-        i_end = np - (int)fdim(np, i_end + 1.0);
+        i_start = static_cast<int>(fdim(i_start, 1.0));
+        i_end = np - static_cast<int>(fdim(np, i_end + 1.0));
     }
 
     const double x_length = i_end - i_start;
